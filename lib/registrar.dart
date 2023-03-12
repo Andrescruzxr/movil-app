@@ -17,7 +17,7 @@ class _MyRegisterState extends State<Registrar> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(0, 136, 27, 27),
+          backgroundColor: Color.fromARGB(0, 148, 37, 37),
           elevation: 0,
         ),
         backgroundColor: Colors.transparent,
@@ -46,10 +46,12 @@ class _MyRegisterState extends State<Registrar> {
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Color.fromARGB(255, 1, 1, 1)),
+                      borderSide:
+                          const BorderSide(color: Color.fromARGB(255, 1, 1, 1)),
                     ),
                     hintText: 'Nombre',
-                    hintStyle: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle:
+                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ),
                 const SizedBox(
@@ -63,11 +65,12 @@ class _MyRegisterState extends State<Registrar> {
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide:
+                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     hintText: 'Correo electronico',
-                    hintStyle: const TextStyle(
-                        color: Color.fromARGB(255, 3, 2, 2)),
+                    hintStyle:
+                        const TextStyle(color: Color.fromARGB(255, 3, 2, 2)),
                   ),
                 ),
                 const SizedBox(
@@ -78,15 +81,17 @@ class _MyRegisterState extends State<Registrar> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide:
+                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide:
+                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     hintText: 'Contraseña',
-                    hintStyle: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle:
+                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ),
                 const SizedBox(
