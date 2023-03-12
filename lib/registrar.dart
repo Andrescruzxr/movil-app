@@ -11,21 +11,12 @@ class _MyRegisterState extends State<Registrar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/images/inicio3.png'), fit: BoxFit.cover),
-      ),
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(0, 148, 37, 37),
-          elevation: 0,
-        ),
-        backgroundColor: Colors.transparent,
         body: Stack(children: [
           Container(
             padding: const EdgeInsets.only(left: 35, top: 80),
             child: const Text(
-              "Crear\nCuenta",
+              "Crea una\nCuenta",
               style:
                   TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 33),
             ),
@@ -49,7 +40,7 @@ class _MyRegisterState extends State<Registrar> {
                       borderSide:
                           const BorderSide(color: Color.fromARGB(255, 1, 1, 1)),
                     ),
-                    hintText: 'Nombre',
+                    hintText: 'Ingresa tu Nombre aqui',
                     hintStyle:
                         const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
@@ -68,7 +59,7 @@ class _MyRegisterState extends State<Registrar> {
                       borderSide:
                           const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
-                    hintText: 'Correo electronico',
+                    hintText: ' Ingresa tu Correo electronico',
                     hintStyle:
                         const TextStyle(color: Color.fromARGB(255, 3, 2, 2)),
                   ),
@@ -89,13 +80,31 @@ class _MyRegisterState extends State<Registrar> {
                       borderSide:
                           const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
-                    hintText: 'Contraseña',
+                    hintText: 'Ingresa una Contraseña',
                     hintStyle:
                         const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 30,
+                ),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide:
+                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide:
+                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                    ),
+                    hintText: 'Confirma tu Contraseña',
+                    hintStyle:
+                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                  ),
                 ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

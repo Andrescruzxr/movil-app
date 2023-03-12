@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signup_page/inicio.dart';
+import 'package:signup_page/pages/paginHome.dart';
+import 'package:signup_page/pages/paginaUsers.dart';
 
 class inicio extends StatefulWidget {
   const inicio({Key? key}) : super(key: key);
@@ -9,7 +11,13 @@ class inicio extends StatefulWidget {
 }
 
 class _inicioState extends State<inicio> {
-  int _paginaActual = 0;
+  int _paginaActual = 1;
+//estas paginas estan en la carpeta pages/2archivos.dart
+  List<Widget> _paginas = [
+    paginaHome(),
+    paginaUsers(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,9 +25,9 @@ class _inicioState extends State<inicio> {
       title: "maetrial",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("inicio Ayudagro"),
+          title: Text("Ayudagro 1.0"),
         ),
-        body: _paginaActual == 0 ? paginaHome() : paginaUsers(),
+        body: _paginas[_paginaActual],
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {
             setState(() {
@@ -36,34 +44,6 @@ class _inicioState extends State<inicio> {
                 label: "Modo\nUusuario")
           ],
         ),
-      ),
-    );
-  }
-}
-
-class paginaHome extends StatelessWidget {
-  const paginaHome({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Modo\nAdministrador",
-        style: TextStyle(fontSize: 30),
-      ),
-    );
-  }
-}
-
-class paginaUsers extends StatelessWidget {
-  const paginaUsers({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Modo\nUsuario",
-        style: TextStyle(fontSize: 30),
       ),
     );
   }

@@ -9,42 +9,11 @@ class MyLogin extends StatefulWidget {
   _MyLoginState createState() => _MyLoginState();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/images/inicio3.png'), fit: BoxFit.cover),
-      ),
       child: Scaffold(
-        backgroundColor: Color.fromARGB(0, 168, 151, 52),
         body: Stack(children: [
           Container(
             padding: const EdgeInsets.only(left: 35, top: 40),
@@ -83,8 +52,6 @@ class _MyLoginState extends State<MyLogin> {
                   height: 20,
                 ),
 
-
-                
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -111,11 +78,27 @@ class _MyLoginState extends State<MyLogin> {
                   minWidth: 400.0,
                   height: 40.0,
                   onPressed: () {
-                    Navigator.pushNamed(context, 'inicio');
+                    // Navigator.pushNamed(context, 'inicio');
                   },
-                  color: Color.fromARGB(255, 119, 124, 127),
+                  color: Color.fromARGB(81, 33, 65, 38),
                   child: Text('Continuar',
                       style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                MaterialButton(
+                  minWidth: 400.0,
+                  height: 40.0,
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'registrar');
+                  },
+                  color: Color.fromARGB(81, 33, 65, 38),
+                  child: Text('Crear Uusuario Nuev@',
+                      style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
 
                 MaterialButton(
@@ -124,7 +107,7 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     Navigator.pushNamed(context, 'inicio');
                   },
-                  color: Color.fromARGB(255, 119, 124, 127),
+                  color: Color.fromARGB(81, 33, 65, 38),
                   child: Text('ingresar sin ser  \nusuario registrado',
                       style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
                 ),
