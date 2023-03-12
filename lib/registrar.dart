@@ -42,14 +42,14 @@ class _MyRegisterState extends State<Registrar> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 221, 217, 217)),
+                          color: Color.fromARGB(255, 11, 11, 11)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color.fromARGB(255, 1, 1, 1)),
                     ),
                     hintText: 'Nombre',
-                    hintStyle: const TextStyle(color: Colors.white),
+                    hintStyle: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ),
                 const SizedBox(
@@ -63,11 +63,11 @@ class _MyRegisterState extends State<Registrar> {
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     hintText: 'Correo electronico',
                     hintStyle: const TextStyle(
-                        color: Color.fromARGB(255, 233, 226, 226)),
+                        color: Color.fromARGB(255, 3, 2, 2)),
                   ),
                 ),
                 const SizedBox(
@@ -79,14 +79,14 @@ class _MyRegisterState extends State<Registrar> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 219, 210, 210)),
+                          color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     hintText: 'Contraseña',
-                    hintStyle: const TextStyle(color: Colors.white),
+                    hintStyle: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ),
                 const SizedBox(
@@ -98,7 +98,7 @@ class _MyRegisterState extends State<Registrar> {
                       const Text(
                         'Registrarse',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 3, 3, 3),
                           fontSize: 27,
                           fontWeight: FontWeight.w700,
                         ),
@@ -112,14 +112,14 @@ class _MyRegisterState extends State<Registrar> {
                     children: [
                       TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'login');
+                          Navigator.pushNamed(context, 'inicio');
                         },
                         child: const Text(
                           'Ingresar',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 25,
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 0, 0, 0),
                           ),
                         ),
                       ),

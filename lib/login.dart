@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signup_page/inicio.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -7,6 +8,32 @@ class MyLogin extends StatefulWidget {
   @override
   _MyLoginState createState() => _MyLoginState();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class _MyLoginState extends State<MyLogin> {
   @override
@@ -20,11 +47,11 @@ class _MyLoginState extends State<MyLogin> {
         backgroundColor: Color.fromARGB(0, 168, 151, 52),
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 80),
+            padding: const EdgeInsets.only(left: 35, top: 40),
             child: const Text(
               "Bienvenido\nAyudagro",
               style: TextStyle(
-                  color: Color.fromARGB(255, 14, 14, 14), fontSize: 75),
+                  color: Color.fromARGB(255, 14, 14, 14), fontSize: 50),
             ),
           ),
           SingleChildScrollView(
@@ -32,7 +59,8 @@ class _MyLoginState extends State<MyLogin> {
               padding: EdgeInsets.only(
                   right: 35,
                   left: 35,
-                  top: MediaQuery.of(context).size.height * 0.5),
+                  // top: MediaQuery.of(context).size.height * 0.5),
+                  top: 350),
               child: Column(children: [
                 TextField(
                   decoration: InputDecoration(
@@ -52,8 +80,11 @@ class _MyLoginState extends State<MyLogin> {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
+
+
+                
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -74,20 +105,44 @@ class _MyLoginState extends State<MyLogin> {
                 const SizedBox(
                   height: 40,
                 ),
-                Row(
+
+                //boton de ingreso
+                MaterialButton(
+                  minWidth: 400.0,
+                  height: 40.0,
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'inicio');
+                  },
+                  color: Color.fromARGB(255, 119, 124, 127),
+                  child: Text('Continuar',
+                      style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                ),
+
+                MaterialButton(
+                  minWidth: 400.0,
+                  height: 70.0,
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'inicio');
+                  },
+                  color: Color.fromARGB(255, 119, 124, 127),
+                  child: Text('ingresar sin ser  \nusuario registrado',
+                      style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                ),
+
+                /*  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    /*const Text(
-                      'Ingresar ->',
+                    const Text(
+                      'ingresar sin ser  \nusuario registrado',
                       style: TextStyle(
                         color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 27,
                         fontWeight: FontWeight.w700,
                       ),
-                    ),*/
+                    ),
                     CircleAvatar(
                       radius: 30,
-                      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                      backgroundColor: Color.fromARGB(255, 20, 19, 19),
                       child: IconButton(
                         color: Color.fromARGB(255, 238, 236, 236),
                         onPressed: () {
@@ -97,7 +152,7 @@ class _MyLoginState extends State<MyLogin> {
                       ),
                     ),
                   ],
-                ),
+                ),*/
                 const SizedBox(
                   height: 40,
                 ),
@@ -118,7 +173,9 @@ class _MyLoginState extends State<MyLogin> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'forgot');
+                        },
                         child: const Text(
                           'Has olvidado tu contraseña',
                           style: TextStyle(

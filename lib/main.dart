@@ -5,6 +5,8 @@ import 'package:signup_page/inicio.dart';
 import 'package:signup_page/perfil.dart';
 import 'package:signup_page/foto.dart';
 import 'package:signup_page/cultivos.dart';
+import 'package:signup_page/pantalla.dart';
+import 'package:signup_page/forgot_password.dart';
 
 void main() {
   runApp(
@@ -18,6 +20,7 @@ void main() {
           'perfil': (context) => const perfil(),
           'foto': (context) => const foto(),
           'cultivos': (context) => const cultivos(),
+          'forgot': (context) => const forgot_password(),
         }),
   );
 }
