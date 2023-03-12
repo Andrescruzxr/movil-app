@@ -80,7 +80,7 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     // Navigator.pushNamed(context, 'inicio');
                   },
-                  color: Color.fromARGB(81, 33, 65, 38),
+                  color: Color.fromARGB(255, 19, 210, 124),
                   child: Text('Continuar',
                       style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
                 ),
@@ -93,7 +93,7 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     Navigator.pushNamed(context, 'registrar');
                   },
-                  color: Color.fromARGB(81, 33, 65, 38),
+                  color: Color.fromARGB(255, 19, 210, 124),
                   child: Text('Crear Uusuario Nuev@',
                       style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
                 ),
@@ -107,7 +107,7 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     Navigator.pushNamed(context, 'inicio');
                   },
-                  color: Color.fromARGB(81, 33, 65, 38),
+                  color: Color.fromARGB(255, 19, 210, 124),
                   child: Text('ingresar sin ser  \nusuario registrado',
                       style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
                 ),
