@@ -5,7 +5,7 @@ class paginaHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Modo Administrador\nAyudagro';
+    const title = 'Modo1 Administrador\nAyudagro';
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: title,

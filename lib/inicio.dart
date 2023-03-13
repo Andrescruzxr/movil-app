@@ -3,6 +3,9 @@ import 'package:signup_page/inicio.dart';
 import 'package:signup_page/pages/paginHome.dart';
 import 'package:signup_page/pages/paginaUsers.dart';
 
+import 'widgest/custom_card_type1.dart';
+import 'widgest/custom_card_type2.dart';
+
 class inicio extends StatefulWidget {
   const inicio({Key? key}) : super(key: key);
 
@@ -27,11 +30,17 @@ class _inicioState extends State<inicio> {
         appBar: AppBar(
           title: Text("Ayudagro 1.0"),
         ),
+        
         body: _paginas[_paginaActual],
+        
+
+
+
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {
             setState(() {
               _paginaActual = index;
+              displayDialog(context);
             });
           },
           currentIndex: _paginaActual,
@@ -45,6 +54,38 @@ class _inicioState extends State<inicio> {
           ],
         ),
       ),
+    );
+  }
+
+  void displayDialog(BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadiusDirectional.circular(10)),
+            title: const Text('BIEMVENIDO AYUDAGRO'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Text(
+                    'Ayudagro la app que  apoya el campo le agradece po utilizar nuestros servicios'),
+                SizedBox(height: 10),
+                FlutterLogo(size: 100)
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text(
+                  'CONTINUAR  =>',
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                ),
+              ),
+            ]);
+      },
     );
   }
 }

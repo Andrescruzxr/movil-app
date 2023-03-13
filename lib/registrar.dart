@@ -11,14 +11,19 @@ class _MyRegisterState extends State<Registrar> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('assets/images/sssss.png'), fit: BoxFit.cover),
+      ),
       child: Scaffold(
+        backgroundColor: Color.fromARGB(0, 168, 151, 52),
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 80),
+            padding: const EdgeInsets.only(left: 80, top: 80),
             child: const Text(
-              "Crea una\nCuenta",
-              style:
-                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 33),
+              "Crea una Cuenta",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255), fontSize: 33),
             ),
           ),
           SingleChildScrollView(
@@ -33,16 +38,17 @@ class _MyRegisterState extends State<Registrar> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 11, 11, 11)),
+                          color: Color.fromARGB(255, 246, 241, 241)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 1, 1, 1)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 250, 250, 250)),
                     ),
                     hintText: 'Ingresa tu Nombre aqui',
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle: const TextStyle(
+                        color: Color.fromARGB(255, 250, 250, 250),
+                        fontSize: 20),
                   ),
                 ),
                 const SizedBox(
@@ -52,16 +58,18 @@ class _MyRegisterState extends State<Registrar> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                     hintText: ' Ingresa tu Correo electronico',
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(255, 3, 2, 2)),
+                    hintStyle: const TextStyle(
+                        color: Color.fromARGB(255, 250, 250, 250),
+                        fontSize: 20),
                   ),
                 ),
                 const SizedBox(
@@ -72,17 +80,18 @@ class _MyRegisterState extends State<Registrar> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 249, 249)),
                     ),
                     hintText: 'Ingresa una Contraseña',
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle: const TextStyle(
+                        color: Color.fromARGB(255, 255, 254, 254),
+                        fontSize: 20),
                   ),
                 ),
                 const SizedBox(
@@ -93,18 +102,22 @@ class _MyRegisterState extends State<Registrar> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 250, 250)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                     hintText: 'Confirma tu Contraseña',
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle: const TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontSize: 20),
                   ),
+                ),
+                const SizedBox(
+                  height: 30,
                 ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -112,7 +125,7 @@ class _MyRegisterState extends State<Registrar> {
                       const Text(
                         'Registrarse',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 3, 3, 3),
+                          color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 27,
                           fontWeight: FontWeight.w700,
                         ),
@@ -133,7 +146,7 @@ class _MyRegisterState extends State<Registrar> {
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 25,
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
                       ),

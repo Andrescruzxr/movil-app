@@ -12,6 +12,8 @@ class _MyperfilState extends State<perfil> {
   @override
   Widget build(BuildContext context) {
     return Container(
+
+      
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/images/inicio3.png'), fit: BoxFit.cover),

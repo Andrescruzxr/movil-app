@@ -13,14 +13,26 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
+
+
+
+
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('assets/images/sssss.png'), fit: BoxFit.cover),
+      ),
+
+
+      
       child: Scaffold(
+        backgroundColor: Color.fromARGB(0, 168, 151, 52),
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 40),
+            padding: const EdgeInsets.only(left: 60, top: 100),
             child: const Text(
-              "Bienvenido\nAyudagro",
+              "BiENVENIDO\nAYUDAGRO",
               style: TextStyle(
-                  color: Color.fromARGB(255, 14, 14, 14), fontSize: 50),
+                  color: Color.fromARGB(255, 253, 253, 253), fontSize: 50),
             ),
           ),
           SingleChildScrollView(
@@ -29,23 +41,24 @@ class _MyLoginState extends State<MyLogin> {
                   right: 35,
                   left: 35,
                   // top: MediaQuery.of(context).size.height * 0.5),
-                  top: 350),
+                  top: 310),
               child: Column(children: [
                 TextField(
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 252, 251, 251)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 238, 236, 236)),
                     ),
                     hintText: 'Correo Electronico',
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle: const TextStyle(
+                        color: Color.fromARGB(255, 255, 253, 253),
+                        fontSize: 20),
                   ),
                 ),
                 const SizedBox(
@@ -57,16 +70,18 @@ class _MyLoginState extends State<MyLogin> {
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color.fromARGB(255, 0, 0, 0)),
+                      borderSide: const BorderSide(
+                          color: Color.fromARGB(255, 255, 253, 253)),
                     ),
                     hintText: 'Contraseña',
-                    hintStyle:
-                        const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                    hintStyle: const TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontSize: 20),
                   ),
                 ),
                 const SizedBox(
@@ -80,9 +95,11 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     // Navigator.pushNamed(context, 'inicio');
                   },
-                  color: Color.fromARGB(255, 19, 210, 124),
+                  color: Color.fromARGB(255, 9, 62, 38),
                   child: Text('Continuar',
-                      style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 20)),
                 ),
                 const SizedBox(
                   height: 10,
@@ -93,9 +110,11 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     Navigator.pushNamed(context, 'registrar');
                   },
-                  color: Color.fromARGB(255, 19, 210, 124),
-                  child: Text('Crear Uusuario Nuev@',
-                      style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                  color: Color.fromARGB(255, 9, 62, 38),
+                  child: Text('Crear Nuevo Usuario',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 251, 250, 250),
+                          fontSize: 20)),
                 ),
                 const SizedBox(
                   height: 10,
@@ -107,9 +126,13 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     Navigator.pushNamed(context, 'inicio');
                   },
-                  color: Color.fromARGB(255, 19, 210, 124),
-                  child: Text('ingresar sin ser  \nusuario registrado',
-                      style: TextStyle(color: Color.fromARGB(255, 6, 6, 6))),
+                  color: Color.fromARGB(255, 9, 62, 38),
+                  child: Text(
+                    'HECHAR UN VISTAZO',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontSize: 20),
+                  ),
                 ),
 
                 /*  Row(
@@ -137,7 +160,7 @@ class _MyLoginState extends State<MyLogin> {
                   ],
                 ),*/
                 const SizedBox(
-                  height: 40,
+                  height: 60,
                 ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -151,7 +174,7 @@ class _MyLoginState extends State<MyLogin> {
                           style: TextStyle(
                             //decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color.fromARGB(255, 3, 3, 3),
+                            color: Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
                       ),
@@ -164,7 +187,7 @@ class _MyLoginState extends State<MyLogin> {
                           style: TextStyle(
                             //decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color.fromARGB(255, 3, 3, 3),
+                            color: Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
                       ),
