@@ -95,6 +95,7 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     // Navigator.pushNamed(context, 'inicio');
                   },
+                  
                   color: Color.fromARGB(255, 9, 62, 38),
                   child: Text('Continuar',
                       style: TextStyle(
