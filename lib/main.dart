@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signup_page/login.dart';
+import 'package:signup_page/pages/categorias.dart';
 import 'package:signup_page/pages/cerrar_sesion.dart';
 import 'package:signup_page/pages/usuarios.dart';
 import 'package:signup_page/registrar.dart';
@@ -26,6 +27,7 @@ void main() {
           'forgot': (context) => const forgot_password(),
           'usuarios': (context) => const usuarios(),
           'cerrar_sesion':(context) => const cerrarSesion(),
+           'categorias':(context) => const categorias(),
         }),
   );
 }

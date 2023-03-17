@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signup_page/inicio.dart';
 import 'package:signup_page/pages/paginHome.dart';
+import 'package:signup_page/pages/paginaPregunta.dart';
 import 'package:signup_page/pages/paginaUsers.dart';
 
 import 'widgest/custom_card_type1.dart';
@@ -19,6 +20,7 @@ class _inicioState extends State<inicio> {
   List<Widget> _paginas = [
     paginaHome(),
     paginaUsers(),
+    paginaPreguntas(),
   ];
 
   @override
@@ -30,17 +32,12 @@ class _inicioState extends State<inicio> {
         appBar: AppBar(
           title: Text("Ayudagro 1.0"),
         ),
-        
         body: _paginas[_paginaActual],
-        
-
-
-
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {
             setState(() {
               _paginaActual = index;
-              displayDialog(context);
+              //displayDialog(context);
             });
           },
           currentIndex: _paginaActual,
@@ -50,7 +47,9 @@ class _inicioState extends State<inicio> {
                 label: "Modo\nAdministrador"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.supervised_user_circle),
-                label: "Modo\nUusuario")
+                label: "Modo\nUusuario"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.note_add), label: "Realiza tus \nPreguntas"),
           ],
         ),
       ),

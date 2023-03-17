@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signup_page/forgot_password.dart';
 import 'package:signup_page/inicio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:signup_page/registrar.dart';
@@ -178,7 +179,9 @@ class _MyLoginState extends State<MyLogin> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'forgot');
+                          final route = MaterialPageRoute(
+                              builder: (context) => const forgot_password());
+                          Navigator.push(context, route);
                         },
                         child: const Text(
                           'Has olvidado tu contraseña',

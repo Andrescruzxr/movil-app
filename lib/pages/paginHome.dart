@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signup_page/pages/cerrar_sesion.dart';
 import 'package:signup_page/perfil.dart';
 
 class paginaHome extends StatelessWidget {
@@ -47,8 +48,8 @@ class paginaHome extends StatelessWidget {
               title: const Text('Cerrar sesion'),
               leading: const Icon(Icons.disabled_by_default),
               onTap: () {
-                final route =
-                    MaterialPageRoute(builder: (context) => const perfil());
+                final route = MaterialPageRoute(
+                    builder: (context) => const cerrarSesion());
                 Navigator.push(context, route);
               },
             ),
