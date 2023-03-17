@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:signup_page/inicio.dart';
+import 'package:signup_page/pages/cerrar_sesion.dart';
 import 'package:signup_page/pages/usuarios.dart';
 import 'package:signup_page/perfil.dart';
 import 'package:signup_page/registrar.dart';
@@ -100,8 +101,8 @@ class paginaUsers extends StatelessWidget {
               title: const Text('Cerrar sesion'),
               leading: const Icon(Icons.disabled_by_default),
               onTap: () {
-                final route =
-                    MaterialPageRoute(builder: (context) => const perfil());
+                final route = MaterialPageRoute(
+                    builder: (context) => const cerrarSesion());
                 Navigator.push(context, route);
               },
             ),

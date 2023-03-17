@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signup_page/inicio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:signup_page/registrar.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -13,17 +14,10 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-
-
-
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/images/sssss.png'), fit: BoxFit.cover),
       ),
-
-
-      
       child: Scaffold(
         backgroundColor: Color.fromARGB(0, 168, 151, 52),
         body: Stack(children: [
@@ -95,7 +89,6 @@ class _MyLoginState extends State<MyLogin> {
                   onPressed: () {
                     // Navigator.pushNamed(context, 'inicio');
                   },
-                  
                   color: Color.fromARGB(255, 9, 62, 38),
                   child: Text('Continuar',
                       style: TextStyle(
@@ -109,7 +102,9 @@ class _MyLoginState extends State<MyLogin> {
                   minWidth: 400.0,
                   height: 40.0,
                   onPressed: () {
-                    Navigator.pushNamed(context, 'registrar');
+                    final route = MaterialPageRoute(
+                        builder: (context) => const Registrar());
+                    Navigator.push(context, route);
                   },
                   color: Color.fromARGB(255, 9, 62, 38),
                   child: Text('Crear Nuevo Usuario',
@@ -125,7 +120,9 @@ class _MyLoginState extends State<MyLogin> {
                   minWidth: 400.0,
                   height: 70.0,
                   onPressed: () {
-                    Navigator.pushNamed(context, 'inicio');
+                    final route =
+                        MaterialPageRoute(builder: (context) => const inicio());
+                    Navigator.push(context, route);
                   },
                   color: Color.fromARGB(255, 9, 62, 38),
                   child: Text(
