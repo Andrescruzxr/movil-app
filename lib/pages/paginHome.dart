@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signup_page/perfil.dart';
 
 class paginaHome extends StatelessWidget {
   const paginaHome({super.key});
@@ -14,30 +15,42 @@ class paginaHome extends StatelessWidget {
           title: const Text(title),
         ),
         body: ListView(
-          children: const <Widget>[
+          children: [
             ListTile(
-              leading: Icon(Icons.account_box_sharp),
-              title: Text('Perfil'),
+              title: const Text('Perfil'),
+              leading: const Icon(Icons.account_box_sharp),
+              onTap: () {
+                final route =
+                    MaterialPageRoute(builder: (context) => const perfil());
+                Navigator.push(context, route);
+              },
             ),
             ListTile(
-              leading: Icon(Icons.account_box_sharp),
-              title: Text('Listar usuarios'),
+              title: const Text('Usuarios activos'),
+              leading: const Icon(Icons.account_box_sharp),
+              onTap: () {
+                final route =
+                    MaterialPageRoute(builder: (context) => const perfil());
+                Navigator.push(context, route);
+              },
             ),
             ListTile(
-              leading: Icon(Icons.face_sharp),
-              title: Text('Usuarios'),
+              title: const Text('Usuarios'),
+              leading: const Icon(Icons.face_sharp),
+              onTap: () {
+                final route =
+                    MaterialPageRoute(builder: (context) => const perfil());
+                Navigator.push(context, route);
+              },
             ),
             ListTile(
-              leading: Icon(Icons.contact_support_outlined),
-              title: Text('Preguntas'),
-            ),
-            ListTile(
-              leading: Icon(Icons.contact_support_outlined),
-              title: Text('Preguntas'),
-            ),
-            ListTile(
-              leading: Icon(Icons.disabled_by_default),
-              title: Text('Cerrar sesion'),
+              title: const Text('Cerrar sesion'),
+              leading: const Icon(Icons.disabled_by_default),
+              onTap: () {
+                final route =
+                    MaterialPageRoute(builder: (context) => const perfil());
+                Navigator.push(context, route);
+              },
             ),
           ],
         ),

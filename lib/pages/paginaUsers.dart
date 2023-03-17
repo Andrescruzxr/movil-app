@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:signup_page/inicio.dart';
+import 'package:signup_page/pages/usuarios.dart';
 import 'package:signup_page/perfil.dart';
 import 'package:signup_page/registrar.dart';
 
@@ -55,7 +56,7 @@ class paginaUsers extends StatelessWidget {
               leading: const Icon(Icons.account_box_sharp),
               onTap: () {
                 final route =
-                    MaterialPageRoute(builder: (context) => const perfil());
+                    MaterialPageRoute(builder: (context) => const usuarios());
                 Navigator.push(context, route);
               },
             ),
@@ -113,8 +114,8 @@ class paginaUsers extends StatelessWidget {
                 Navigator.push(context, route);
               },
             ),
-          
-           /* ListTile(
+
+            /* ListTile(
               trailing: ElevatedButton(
                 onPressed: () {
                   final route =
