@@ -19,7 +19,7 @@ class categorias extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('List Example'),
+        title: Text('Categorias'),
       ),
       body: ListView.builder(
         itemCount: items.length,
