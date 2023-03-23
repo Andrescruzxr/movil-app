@@ -30,6 +30,12 @@ class paginaUsers extends StatelessWidget {
               items: [
                 // Aquí puedes colocar los elementos que deseas mostrar en el carrousel
 
+                TextField(
+                    decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: 'search',
+                  border: OutlineInputBorder(),
+                )),
                 Image.asset('assets/images/campo1.png'),
                 Image.asset('assets/images/sssss.png'),
                 Image.asset('assets/images/facebook.png'),
@@ -50,11 +56,18 @@ class paginaUsers extends StatelessWidget {
             ),
           ),
         ),
+        
 
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
+              TextField(
+                  decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: 'search',
+                border: OutlineInputBorder(),
+              )),
               DrawerHeader(
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 19, 210, 124),

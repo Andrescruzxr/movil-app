@@ -23,6 +23,13 @@ class _MyHomePageState extends State<MyHomePage> {
   String _text = '';
   String _text2 = '';
 
+  int _counter = 0;
+  void _incrementcounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   void _onTextChanged(String value) {
     setState(() {
       _text = value; // Agregar el texto ingresado al texto acumulado
@@ -43,6 +50,28 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 20,
+              ),
+
+              TextField(
+                  decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: 'search',
+                border: OutlineInputBorder(),
+              )),
+
+              GestureDetector(
+                onTap: _incrementcounter,
+                child: Container(
+                  width: 160,
+                  height: 50,
+                  color: Color.fromARGB(255, 7, 161, 58),
+                  child: Center(
+                    child: Text('presionar $_counter veces'),
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -83,26 +112,77 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 8),
 
               DataTable(
-                columns: [
-                  DataColumn(label: Text('PREGUNTAS')),
-                  DataColumn(label: Text('RESPUESTAS')),
-                ],
-                rows: [
-                  DataRow(cells: [
-                    DataCell(Text(
-                      _text,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 90, 23, 7),
+                columns: const <DataColumn>[
+                  DataColumn(
+                    label: Expanded(
+                      child: Text(
+                        'PREGUNTAS',
+                        style: TextStyle(fontStyle: FontStyle.italic),
                       ),
-                    )),
-                    DataCell(Text(_text2)),
-                  ]),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Expanded(
+                      child: Text(
+                        'RESPUESTAS',
+                        style: TextStyle(fontStyle: FontStyle.italic),
+                      ),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Expanded(
+                      child: Text(
+                        'LIKES',
+                        style: TextStyle(fontStyle: FontStyle.italic),
+                      ),
+                    ),
+                  ),
                 ],
-                columnSpacing: 20,
-                dividerThickness: 5,
-              ), // Mostrar el texto acumulado
+                rows: <DataRow>[
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text(
+                        _text,
+                      )),
+                      DataCell(Text(_text2)),
+                      DataCell(Text('Student')),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(
+                        GestureDetector(
+                          onTap: () {
+                            GestureDetector(
+                              onTap: _incrementcounter,
+                              child: Container(
+                                width: 1,
+                                height: 5,
+                                color: Color.fromARGB(255, 7, 161, 58),
+                                child: Center(
+                                  child: Text('presionar $_counter veces'),
+                                ),
+                              ),
+                            );
+                            // acción cuando se toca la celda
+                          },
+                        ),
+                      ),
+                      DataCell(Text(_text2)),
+                      DataCell(Text('$_counter')),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text(_text)),
+                      DataCell(Text(_text2)),
+                      DataCell(Text('Associate Professor')),
+                    ],
+                  ),
+                ],
+              )
+
+              // Mostrar el texto acumulado
             ],
           ),
         ),
