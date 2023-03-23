@@ -25,13 +25,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _onTextChanged(String value) {
     setState(() {
-      _text += value; // Agregar el texto ingresado al texto acumulado
+      _text = value; // Agregar el texto ingresado al texto acumulado
     });
   }
 
   void _respuesta(String value) {
     setState(() {
-      _text2 += value; // Agregar el texto ingresado al texto acumulado
+      _text2 = value; // Agregar el texto ingresado al texto acumulado
     });
   }
 
@@ -91,6 +91,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   DataRow(cells: [
                     DataCell(Text(
                       _text,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 90, 23, 7),
+                      ),
                     )),
                     DataCell(Text(_text2)),
                   ]),
